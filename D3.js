@@ -276,22 +276,6 @@ let randomNum = Math.floor(Math.random() * numMax);
 for (let i = 0; i < starWarsCharacters.length; i++) {
   let starWarsCharObj = starWarsCharacters[randomNum];
   console.log(
-    "Il personaggio si chiama " +
-      starWarsCharObj.name +
-      " ed è alto " +
-      starWarsCharObj.height +
-      "cm ed una massa di " +
-      starWarsCharObj.mass +
-      ". E' di genere " +
-      starWarsCharObj.gender +
-      " ed ha capelli color " +
-      starWarsCharObj.hair_color +
-      ", pelle color " +
-      starWarsCharObj.skin_color +
-      " e occhi color " +
-      starWarsCharObj.eye_color +
-      ". Il suo anno di nascita è il " +
-      starWarsCharObj.birth_year +
-      "."
+    `Il personaggio si chiama ${starWarsCharObj.name} ed è alto ${starWarsCharObj.height}cm, con una massa di ${starWarsCharObj.mass}. E' di genere ${starWarsCharObj.gender} ed ha capelli color ${starWarsCharObj.hair_color}, pelle color ${starWarsCharObj.skin_color} e occhi color ${starWarsCharObj.eye_color}. Il suo anno di nascita è il ${starWarsCharObj.birth_year}.`
   );
 }
