@@ -138,7 +138,7 @@ console.log("Personaggi femminili", femaleCharacters);
   Ad ognuna di queste proprietà assegna come valore un array vuoto.
 */
 
-let eyeColor = { blue: [], yellow: [], brown: [], red: [], "blue-gray": [] };
+const eyeColor = { blue: [], yellow: [], brown: [], red: [], "blue-gray": [] };
 
 /* ESERCIZIO 5
   Utilizza uno switch statement per inserire uno ad uno gli oggetti dei personaggi di "starWarsCharacters" negli array relativi al colore degli occhi precedentemente creati.
@@ -146,35 +146,36 @@ let eyeColor = { blue: [], yellow: [], brown: [], red: [], "blue-gray": [] };
 */
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  switch (starWarsCharacters[i].eye_color) {
+  let character = starWarsCharacters[i]; // creata variabile per personaggio singolo - aggiunta rispetto a prima
+  switch (character.eye_color) {
     case "blue":
-      eyeColor.blue.push(starWarsCharacters[i]);
+      eyeColor.blue.push(character);
       break;
     case "yellow":
-      eyeColor.yellow.push(starWarsCharacters[i]);
+      eyeColor.yellow.push(character);
       break;
     case "brown":
-      eyeColor.brown.push(starWarsCharacters[i]);
+      eyeColor.brown.push(character);
       break;
     case "red":
-      eyeColor.red.push(starWarsCharacters[i]);
+      eyeColor.red.push(character);
       break;
     case "blue-gray":
-      eyeColor["blue-gray"].push(starWarsCharacters[i]);
+      eyeColor["blue-gray"].push(character);
       break;
   }
 }
 
-console.log(eyeColor);
+console.log("Array eyeColor aggiornato", eyeColor);
 
 /* -------------SOLUZIONE ALTERNATIVA (da ignorare)----------------- */
 
-// let eye = [];
-// eye = Object.getOwnPropertyNames(eyeColor);
-// console.log(eye);
+// let colors = [];
+// colors = Object.getOwnPropertyNames(eyeColor);
+// console.log(colors);
 
-// for (let i = 0; i < starWarsCharacters.length; i++) {
-//   let singleColor = eye[i];
+// for (let i = 0; i <= starWarsCharacters.length; i++) {
+//   let singleColor = colors[i];
 //   console.log(singleColor);
 //   switch (starWarsCharacters[i].eye_color) {
 //     case "blue":
@@ -194,6 +195,8 @@ console.log(eyeColor);
 //       break;
 //   }
 // }
+
+// console.log("Array colori aggiornato", eyeColor);
 
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
@@ -281,6 +284,10 @@ let randomNum = Math.floor(Math.random() * numMax);
 for (let i = 0; i < starWarsCharacters.length; i++) {
   let starWarsCharObj = starWarsCharacters[randomNum];
   console.log(
-    `Il personaggio si chiama ${starWarsCharObj.name}, la sua altezza è di ${starWarsCharObj.height}cm, con una massa di ${starWarsCharObj.mass}. E' di genere ${starWarsCharObj.gender} ed ha capelli color ${starWarsCharObj.hair_color}, pelle color ${starWarsCharObj.skin_color} e occhi color ${starWarsCharObj.eye_color}. Il suo anno di nascita è il ${starWarsCharObj.birth_year}.`
+    `Abbiamo selezionato il personaggio alla posizione ${randomNum + 1} (index ${randomNum}). Il personaggio si chiama ${
+      starWarsCharObj.name
+    }, la sua altezza è di ${starWarsCharObj.height}cm, con una massa di ${starWarsCharObj.mass}. E' di genere ${starWarsCharObj.gender} ed ha capelli color ${
+      starWarsCharObj.hair_color
+    }, pelle color ${starWarsCharObj.skin_color} e occhi color ${starWarsCharObj.eye_color}. Il suo anno di nascita è il ${starWarsCharObj.birth_year}.`
   );
 }
