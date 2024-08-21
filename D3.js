@@ -242,7 +242,7 @@ let robotCharacters = [];
 for (let i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender.toLowerCase() === "n/a") {
     starWarsCharacters[i].gender = "robot"; // riassegno il valore alla proprietà gender nello stesso array
-    console.log(starWarsCharacters[i]); // mostro solo gli oggetti a cui ho modificato la proprietà gender (si ripete ad ogni iterazione del loop)
+    console.log("Modifico gender in robot", starWarsCharacters[i]); // mostro solo gli oggetti a cui ho modificato la proprietà gender (si ripete ad ogni iterazione del loop)
     robotCharacters.push(starWarsCharacters[i]); // data una variabile precedentemente creata (fuori dal loop), aggiungo gli oggetti interessati dalla modifica ad un nuovo array
   }
 }
@@ -254,6 +254,44 @@ console.log("Nuovo array con personaggi robot", robotCharacters); // visualizzo 
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
 
+// console.log("Prima della modifica", charactersNames.length);
+
+// for (let i = 0; i < charactersNames.length; i++) {
+
+//   if (femaleName === charactersNames[i]) {
+//     charactersNames.splice(i, 1);
+//   }
+// }
+
+// console.log("Dopo la modifica", charactersNames.length);
+// console.log(charactersNames);
+
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
+
+let numMax = starWarsCharacters.length;
+let randomNum = Math.floor(Math.random() * numMax);
+
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  let starWarsCharObj = starWarsCharacters[randomNum];
+  console.log(
+    "Il personaggio si chiama " +
+      starWarsCharObj.name +
+      " ed è alto " +
+      starWarsCharObj.height +
+      "cm ed una massa di " +
+      starWarsCharObj.mass +
+      ". E' di genere " +
+      starWarsCharObj.gender +
+      " ed ha capelli color " +
+      starWarsCharObj.hair_color +
+      ", pelle color " +
+      starWarsCharObj.skin_color +
+      " e occhi color " +
+      starWarsCharObj.eye_color +
+      ". Il suo anno di nascita è il " +
+      starWarsCharObj.birth_year +
+      "."
+  );
+}
