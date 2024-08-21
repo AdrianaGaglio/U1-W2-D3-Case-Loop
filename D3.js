@@ -169,30 +169,30 @@ console.log(eyeColor);
 
 /* -------------SOLUZIONE ALTERNATIVA (da ignorare)----------------- */
 
-// let eye = Object.getOwnPropertyNames(eyeColor);
-// let color = null;
+// let eye = [];
+// eye = Object.getOwnPropertyNames(eyeColor);
 // console.log(eye);
 
 // for (let i = 0; i < starWarsCharacters.length; i++) {
-//   color = String(eye[i]);
-//   console.log(color);
-//   // switch (starWarsCharacters[i].eye_color) {
-//   //   case "blue":
-//   //     eyeColor[color].push(starWarsCharacters[i]);
-//   //     break;
-//   //   case "yellow":
-//   //     eyeColor[color].push(starWarsCharacters[i]);
-//   //     break;
-//   //   case "brown":
-//   //     eyeColor[color].push(starWarsCharacters[i]);
-//   //     break;
-//   //   case "red":
-//   //     eyeColor[color].push(starWarsCharacters[i]);
-//   //     break;
-//   //   case "blue-gray":
-//   //     eyeColor[color].push(starWarsCharacters[i]);
-//   //     break;
-//   // }
+//   let singleColor = eye[i];
+//   console.log(singleColor);
+//   switch (starWarsCharacters[i].eye_color) {
+//     case "blue":
+//       eyeColor[singleColor].push(starWarsCharacters[i]);
+//       break;
+//     case "yellow":
+//       eyeColor[singleColor].push(starWarsCharacters[i]);
+//       break;
+//     case "brown":
+//       eyeColor[singleColor].push(starWarsCharacters[i]);
+//       break;
+//     case "red":
+//       eyeColor[singleColor].push(starWarsCharacters[i]);
+//       break;
+//     case "blue-gray":
+//       eyeColor[singleColor].push(starWarsCharacters[i]);
+//       break;
+//   }
 // }
 
 /* ESERCIZIO 6
