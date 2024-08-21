@@ -145,6 +145,8 @@ const eyeColor = { blue: [], yellow: [], brown: [], red: [], "blue-gray": [] };
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 
+eyeColor.blue[];
+
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
@@ -186,6 +188,18 @@ if (crewMass <= 500) {
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
+
+let robotCharacters = [];
+
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  if (starWarsCharacters[i].gender.toLowerCase() === "n/a") {
+    starWarsCharacters[i].gender = "robot"; // riassegno il valore alla proprietà gender nello stesso array
+    console.log(starWarsCharacters[i]); // mostro solo gli oggetti a cui ho modificato la proprietà gender (si ripete ad ogni iterazione del loop)
+    robotCharacters.push(starWarsCharacters[i]); // data una variabile precedentemente creata (fuori dal loop), aggiungo gli oggetti interessati dalla modifica ad un nuovo array
+  }
+}
+
+console.log("Nuovo array con personaggi robot", robotCharacters); // visualizzo il nuovo array
 
 /* --EXTRA-- ESERCIZIO 9
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
