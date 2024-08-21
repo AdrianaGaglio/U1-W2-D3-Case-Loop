@@ -138,14 +138,62 @@ console.log("Personaggi femminili", femaleCharacters);
   Ad ognuna di queste proprietà assegna come valore un array vuoto.
 */
 
-const eyeColor = { blue: [], yellow: [], brown: [], red: [], "blue-gray": [] };
+let eyeColor = { blue: [], yellow: [], brown: [], red: [], "blue-gray": [] };
 
 /* ESERCIZIO 5
   Utilizza uno switch statement per inserire uno ad uno gli oggetti dei personaggi di "starWarsCharacters" negli array relativi al colore degli occhi precedentemente creati.
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 
-eyeColor.blue[];
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  switch (starWarsCharacters[i].eye_color) {
+    case "blue":
+      eyeColor.blue.push(starWarsCharacters[i]);
+      break;
+    case "yellow":
+      eyeColor.yellow.push(starWarsCharacters[i]);
+      break;
+    case "brown":
+      eyeColor.brown.push(starWarsCharacters[i]);
+      break;
+    case "red":
+      eyeColor.red.push(starWarsCharacters[i]);
+      break;
+    case "blue-gray":
+      eyeColor["blue-gray"].push(starWarsCharacters[i]);
+      break;
+  }
+}
+
+console.log(eyeColor);
+
+/* -------------SOLUZIONE ALTERNATIVA (da ignorare)----------------- */
+
+// let eye = Object.getOwnPropertyNames(eyeColor);
+// let color = null;
+// console.log(eye);
+
+// for (let i = 0; i < starWarsCharacters.length; i++) {
+//   color = String(eye[i]);
+//   console.log(color);
+//   // switch (starWarsCharacters[i].eye_color) {
+//   //   case "blue":
+//   //     eyeColor[color].push(starWarsCharacters[i]);
+//   //     break;
+//   //   case "yellow":
+//   //     eyeColor[color].push(starWarsCharacters[i]);
+//   //     break;
+//   //   case "brown":
+//   //     eyeColor[color].push(starWarsCharacters[i]);
+//   //     break;
+//   //   case "red":
+//   //     eyeColor[color].push(starWarsCharacters[i]);
+//   //     break;
+//   //   case "blue-gray":
+//   //     eyeColor[color].push(starWarsCharacters[i]);
+//   //     break;
+//   // }
+// }
 
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
